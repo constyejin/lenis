@@ -1,14 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Scroll Test</title>
   <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-  <div class="wrapper">
-    
-  </div>
+
+  <section class="back-img sec1"></section>
+  
+  <section class="back-img sec2">
+    <div class="horizontal-container">
+      <div class="panel p1">Page 1</div>
+      <div class="panel p2">Page 2</div>
+      <div class="panel p3">Page 3</div>
+    </div>
+  </section>
+  
+  <section class="back-img sec3"></section>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+    ScrollTrigger.defaults({ markers: false });
+
+    ScrollTrigger.create({
+      trigger: "body",
+      start: "top top",
+      end: "bottom bottom",
+      snap: 1 / 2 
+    });
+
+
+    const container = document.querySelector(".horizontal-container");
+    const panels = gsap.utils.toArray(".panel");
+    const totalPanels = panels.length;
+
+    gsap.to(container, {
+      xPercent: -100 * (totalPanels - 1), 
+      ease: "none",
+      scrollTrigger: {
+        trigger: ".sec2",
+        start: "top top",
+        end: () => "+=" + container.offsetWidth, 
+        pin: true,
+        scrub: 1,
+        snap: 1 / (totalPanels - 1), 
+      }
+    });
+  </script>
 </body>
 </html>
