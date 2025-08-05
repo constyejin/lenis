@@ -1,7 +1,7 @@
 gsap.registerPlugin(Observer, ScrollTrigger);
 
-const sections = gsap.utils.toArray("section:not(.row_slide)");
-const rowSlides = gsap.utils.toArray(".row_slide .slide");
+const sections = gsap.utils.toArray("section");
+const rowSlides = gsap.utils.toArray(".row_list .slide");
 
 console.log(sections)
 
@@ -20,7 +20,7 @@ function gotoSection(index) {
   animating = true;
 
   gsap.timeline({
-    defaults: { duration: 1, ease: "power1.inOut" },
+    defaults: { duration: 1.2, ease: "power1.inOut" },
     onComplete: () => (animating = false)
   })
     .to(sections[currentIndex], { autoAlpha: 0, zIndex: 0 })
@@ -81,3 +81,7 @@ Observer.create({
     }
   },
 });
+
+
+
+
