@@ -42,10 +42,39 @@
   width: 100%;
   height: 100%;
   z-index: 100;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
-.card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.card:nth-child(1) {
+  background-image: url('/assets/images/main-2.png');
+}
+
+.card:nth-child(2) {
+  background-image: url('/assets/images/mission_02.png');
+}
+
+.card:nth-child(3) {
+  background-image: url('/assets/images/mission_03.png');
+}
+
+.card:nth-child(4) {
+  background-image: url('/assets/images/mission_04.png');
+}
+
+.card:nth-child(5) {
+  background-image: url('/assets/images/mission_05.png');
+}
+
+.card:nth-child(6) {
+  background-image: url('/assets/images/mission_06.png');
+}
+
+
+.card:nth-child(1) img {
+  position: absolute;
+  width: 78%;
+  bottom: 4%;
+  left: 14%;
 }

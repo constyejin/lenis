@@ -1,38 +1,47 @@
+gsap.registerPlugin(Observer);
+
 const cards = gsap.utils.toArray(".card");
-ScrollTrigger.defaults({ markers: false });
+let currentIndex = 0;
+let animating = false;
 
-gsap.set(cards, {
-  x: () => (cards[0].clientWidth + window.innerWidth) / 2
+// 초기 카드 위치
+gsap.set(cards, { xPercent: (i) => 100 * i });
+
+function gotoCard(index) {
+  if (index < 0 || index >= cards.length || animating) return;
+
+  animating = true;
+  gsap.to(cards, {
+    xPercent: (i) => 100 * (i - index),
+    duration: 1,
+    onComplete: () => animating = false
+  });
+
+  currentIndex = index;
+}
+
+// 첫 카드 고정
+ScrollTrigger.create({
+  trigger: ".pin-wrapper",
+  start: "top top",
+  end: "+=" + (cards.length - 1) * window.innerHeight,
+  pin: true,
+  scrub: false
 });
 
-const tl = gsap.timeline({
-  scrollTrigger: {
-    trigger: ".pin-wrapper",
-    start: "top top",
-    end: "+=" + cards.length * 70 + "%",
-    scrub: true,
-    pin: true,
-    markers: false
+
+// 휠 이벤트 → 한 장씩
+Observer.create({
+  type: "wheel,touch",
+  preventDefault: true,
+  onDown: () => {
+    if (currentIndex < cards.length - 1) gotoCard(currentIndex + 1);
+  },
+  onUp: () => { 
+    if (currentIndex > 0) gotoCard(currentIndex - 1);
   }
 });
-cards.forEach((c, i) => {
-  tl.to(
-    c,
-    {
-      x: 0
-    },
-    i ? "+=0.25" : ""
-  );
-  if (i > 0) {
-    tl.to(
-      cards[i],
-      {
-        scale: 0.9,
-        opacity: 0,
-        transformOrigin: "center center",
-        ease: "none",
-        duration: 0.25
-      },
-    );
-  }
-});
+
+// 첫 화면 설정
+gotoCard(0);
+
