@@ -1,0 +1,65 @@
+[
+  {
+    "number": "01",
+    "subtitle": "Development",
+    "desc": "누구나 쉽게 몰입할 수 있는 환경을 제공하고, 표준화된 운영과 개인화 데이터를 통해 고객 만족과 서비스 효율을 극대화 시킵니다.",
+    "img": "./images/home/development.jpg",
+    "active": true
+  },
+  {
+    "number": "02",
+    "subtitle": "AI",
+    "desc": "AI로 고객 행동을 분석해 맞춤형 게임 경험을 제공하고, 운영 자동화로 효율성과 서비스 품질을 동시에 강화합니다.",
+    "img": "./images/home/ai.jpg",
+    "active": false
+  },
+  {
+    "number": "03",
+    "subtitle": "Publishing",
+    "desc": "시장별 선호를 반영한 현지화로 맞춤형 콘텐츠를 제공하고, 표준화된 운영과 분석으로 퍼블리싱 효율과 경쟁력을 강화합니다.",
+    "img": "./images/home/publishing.jpg",
+    "active": false
+  },
+  {
+    "number": "04",
+    "subtitle": "Planning",
+    "desc": "고객 니즈와 행동을 분석해 몰입형 서비스를 기획하고, 표준화된 운영과 데이터 기반 전략으로 만족과 성과를 극대화합니다.",
+    "img": "./images/home/planning.jpg",
+    "active": false
+  },
+  {
+    "number": "05",
+    "subtitle": "Design",
+    "desc": "고객 취향과 트렌드를 반영해 매력적인 디자인을 구성하여, 운영 품질과 고객의 만족도를 높입니다.",
+    "img": "./images/home/design.jpg",
+    "active": false
+  },
+  {
+    "number": "06",
+    "subtitle": "UI&UX",
+    "desc": "행동 데이터 기반으로 직관적 UI/UX를  설계하고, 체계적 운영으로 고객 만족과 서비스 경쟁력을 강화합니다.",
+    "img": "./images/home/uiux.jpg",
+    "active": false
+  },
+  {
+    "number": "07",
+    "subtitle": "Technology",
+    "desc": "최신 기술과 보안으로 안정적 서비스를 제공하고, 자동화와 분석으로 믿을 수 있는 서비스를 제공합니다.",
+    "img": "./images/home/technology.jpg",
+    "active": false
+  },
+  {
+    "number": "08",
+    "subtitle": "Experience",
+    "desc": "몰입형 상호작용 경험과 맞춤 서비스를 제공하고, 표준화된 운영으로 고객 만족과 플랫폼 경쟁력을 강화합니다.",
+    "img": "./images/home/experience.jpg",
+    "active": false
+  },
+  {
+    "number": "09",
+    "subtitle": "Platform",
+    "desc": "DDG 플랫폼은 게임과 기능을 통합한 플랫폼으로 손쉬운 접근과 즐거움을 제공하고, 효율적 운영으로 만족과 품질을 극대화합니다",
+    "img": "./images/home/platform.jpg",
+    "active": false
+  }
+]

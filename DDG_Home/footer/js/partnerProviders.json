@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "alt": "피나클",
+    "img": "../providers/pinnacle.svg"
+  },
+  {
+    "id": 2,
+    "alt": "스보벳",
+    "img": "../providers/sbobet.svg"
+  },
+  {
+    "id": 3,
+    "alt": "플레이텍",
+    "img": "../providers/playtech.svg"
+  },
+  {
+    "id": 4,
+    "alt": "에볼루션",
+    "img": "../providers/evolution.svg"
+  },
+  {
+    "id": 5,
+    "alt": "프라그마틱 플레이",
+    "img": "../providers/pragmatic-play.svg"
+  },
+  {
+    "id": 6,
+    "alt": "두윈",
+    "img": "../providers/dowinn.svg"
+  },
+  {
+    "id": 7,
+    "alt": "스카이윈드",
+    "img": "../providers/skywind.svg"
+  },
+  {
+    "id": 8,
+    "alt": "마이크로 게이밍",
+    "img": "../providers/microgaming.svg"
+  },
+  {
+    "id": 9,
+    "alt": "플레이 에이스",
+    "img": "../providers/playace.svg"
+  },
+  {
+    "id": 10,
+    "alt": "올벳",
+    "img": "../providers/allbet.svg"
+  },
+  {
+    "id": 11,
+    "alt": "PG소프트",
+    "img": "../providers/pgsoft.svg"
+  },
+  {
+    "id": 12,
+    "alt": "부운고",
+    "img": "../providers/booongo.svg"
+  },
+  {
+    "id": 13,
+    "alt": "하바네로",
+    "img": "../providers/habanero.svg"
+  },
+  {
+    "id": 14,
+    "alt": "벳소프트",
+    "img": "../providers/betsoft.svg"
+  },
+  {
+    "id": 15,
+    "alt": "CQ9",
+    "img": "../providers/cq9.svg"
+  },
+  {
+    "id": 16,
+    "alt": "플레이앤고",
+    "img": "../providers/playngo.svg"
+  }
+]

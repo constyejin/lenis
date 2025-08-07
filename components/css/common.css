@@ -1,0 +1,106 @@
+@charset "UTF-8";
+@import url('https://fonts.cdnfonts.com/css/segoe-pro');
+:root {
+  --primary: #130CE5;
+  --secondary: #D7C9EA;
+  --tertiary: #D5D8E0;
+  --border-color: #CCCCCC;
+
+  --border-main: 20px;
+}
+
+* {margin: 0; padding: 0; -webkit-box-sizing: border-box; box-sizing: border-box; font-family: 'Segoe Pro', sans-serif; font-family: 'Segoe Pro Display', sans-serif;}
+*::before,*::after {-webkit-box-sizing: border-box; box-sizing: border-box;}
+
+html {font-size: 12px; overflow-x: hidden;}
+body {background-color: #fff; font-size: 0.8em; overflow-x: hidden;}
+button, a {cursor: pointer; text-decoration: none; color: inherit;}
+img {width: 100%;}
+ol,ul {list-style-type: none;}
+/* 공용 클래스 */
+.upper {text-transform: uppercase;}
+.hidden {display: none;}
+.clearfix:after {display: block; clear: both; content: "";}
+.blind,.sound-only {position: absolute; left: -9999em;}
+#skip a {position: fixed; top: -10rem; left: 0; z-index: 100; width: 100%; line-height: 4em; text-align: center; background-color: #fff;}
+#skip a:focus {top: 0;}
+.sec_home, .main_text {height: 100vh;}
+
+/* Header */
+#ddg_my_header {background: transparent; position: fixed; width: 100%;  transition: 0.3s; border-bottom: 1px solid #ffffff30; z-index: 10; backdrop-filter: blur(5px);}
+#ddg_my_header .white_logo {display: inline-block;}
+#ddg_my_header .purple_logo {display: none;}
+
+.header_inner {padding-left: 2em;transition: 0.3s;}
+.ddg_my_logo a  { display: block; width: 4.3em; height: 4em; padding: 1.4em 0;}
+.ddg_my_util {position: fixed; top: 0; right: -100%; width: 70%; height: 100vh; background-color: #fff; -webkit-transition: right 0.3s; transition: right 0.3s; z-index: 11;}
+.ddg_my_util.active {right: 0;}
+.ddg_my_util #ddg_my_gnb {padding-top: 8em; }
+.ddg_my_util #ddg_my_gnb ol {display: flex; flex-direction: column;}
+.ddg_my_util #ddg_my_gnb .depth1 {position: relative;}
+.ddg_my_util #ddg_my_gnb .depth1 > a {display: block; padding:1em 2em; line-height: 2em; font-size: 1.8em;  color: #000; }
+.ddg_my_util #ddg_my_gnb .depth1:last-child  > a{padding-right: 0;}
+.mo .ddg_my_util #ddg_my_gnb .depth1 {transition: all 0.3s;}
+.mo .ddg_my_util #ddg_my_gnb .depth1.active {background-color: var(--primary);}
+.mo .ddg_my_util #ddg_my_gnb .depth1.active > a { color: #fff;}
+
+.header_mobile_bg {display: none; position: absolute; top: 0; left: 0; width: 100%; height: 100vh; background-color: rgba(0,0,0,0.5);  backdrop-filter: blur(3px); z-index: 1;}
+/* 햄버거 메뉴 */
+.m_gnb_btn {  position: absolute; top: 0.5em; right: 0.5em; color: #fff;  font-size: 4em; border: none; background: transparent; z-index: 12;}
+
+
+/* Footer */
+.sec_ft {background-color: #000522; color: #454E79; text-align: center; padding: 6em 0; height: auto;}
+.footer_logo {display: inline-block; width: 10em; margin-bottom: 1em;}
+.foot_desc {font-size: 1.1em;}
+
+
+/* 스크롤 바 */
+::-webkit-scrollbar { width: 16px;}
+::-webkit-scrollbar-track {background-color: #000;}
+::-webkit-scrollbar-thumb { background-color: #500297; border: 1px solid #000;}
+
+/* top 버튼 */
+.top_btn {position: fixed; right: 2em; bottom: 2em; width: 3em; height: 3em; font-size: 1.4em; border: 0; border-radius: 50%; opacity: 0.9; border: 1px solid var(--primary); background-color: #fff; color: var(--primary); transition: all 0.2s; z-index: 9;}
+.top_btn:hover {box-shadow: 0 0.5em 1em rgba(0,0,0,0.16); opacity: 1;}
+.max_inner {max-width: 1024px; margin: 0 auto;}
+
+@media screen and (max-width: 300px) {
+  body {font-size: 0.5em;}
+}
+@media screen and (min-width: 300px) {
+  body {font-size: 0.6em;}
+}
+@media screen and (min-width: 780px) {
+  body {font-size: 0.8em;}
+}
+/* pc 헤더 변경 : 1280px~ */
+@media screen and (min-width: 1280px) {
+  body {font-size: 1em;}
+  #ddg_my_header {}
+  .header_inner { display: -ms-flexbox; display: flex; align-items: center; justify-content:center; padding: 0; opacity: 0.8;}
+  .ddg_my_util { position: static; width: calc(100% - 10rem);height: auto;background-color: transparent;}
+  .ddg_my_util #ddg_my_gnb {padding-top: 0; }
+  .ddg_my_util #ddg_my_gnb ol {display: flex; display: -ms-flexbox; justify-content: flex-end; flex-direction: row;}
+  .ddg_my_util #ddg_my_gnb .depth1 > a { padding:0 4em 0 2em; line-height: 3.4em; font-size: 1.25em; color: #fff; }
+  
+  #ddg_my_header.dark_header {background-color: #fff;border-bottom: 1px solid #00000030;}
+  #ddg_my_header.dark_header .header_inner {opacity: 1;}
+  #ddg_my_header.dark_header .white_logo {display: none;}
+  #ddg_my_header.dark_header .purple_logo {display: inline-block;}
+  #ddg_my_header.dark_header .ddg_my_util #ddg_my_gnb .depth1 > a {color: #000; }
+
+  .purple_util #ddg_my_gnb .depth1 > a { color: #000; }
+  .ddg_my_logo a {width: 3.5em; height: 1em; padding: 0;}
+  .m_gnb_btn {display: none;}
+
+}
+@media screen and (min-width: 1680px) {
+  body {font-size: 1.2em;}
+  .max_inner {max-width: 1200px; margin: 0 auto;}
+}
+
+@media screen and (min-width: 1920px) {
+  body {font-size: 1.6em;}
+  .max_inner {max-width: 1680px; margin: 0 auto;}
+}
